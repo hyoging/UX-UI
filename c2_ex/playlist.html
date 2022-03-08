@@ -1,0 +1,30 @@
+<!doctype html>
+<head>
+<meta charset="utf-8">
+<title>재생 목록</title>
+<script>
+function addSongs() {
+	var song1 = document.getElementById("song1");//song1은 이미존재한 id 값
+	var song2 = document.getElementsById("song2");
+	var song3 = document.getElementById("song3");
+
+	song1.innerHTML = "푸른 빛 스웨이드 문자열 - 엘비스 페이질리";
+	song2.innerHTML = "한 페이지가 될 수 있게 - 데이식스";
+	song3.innerHTML = "zombie - 데이식스";
+
+}
+window.onload = addSongs;
+
+</script>
+</head>
+<body>
+
+<h1>나의 멋진 재생 목록</h1>
+<ul id="playlist">
+<li id="song1"></li>
+<li id="song2"></li>
+<li id="song3"></li>
+</ul>
+
+</body>
+</html>
