@@ -26,13 +26,18 @@ function displayItems() {
   document.getElementById("demo").innerHTML = "";
   for (i = 0; i < localStorage.length; i++) {
   x = localStorage.key(i);
-  document.getElementById("demo").innerHTML += x + "<br>";
+  y = localStorage.getItem(x);
+
+  document.getElementById("demo").innerHTML += (x + '   :   ' + y) + "<br>";
+  
   }
 }
 function deleteItems() {
   localStorage.clear();
 }
   </script>
+  <hr>
+  <p id = "demo"></p>
 
 </body>
 </html>
