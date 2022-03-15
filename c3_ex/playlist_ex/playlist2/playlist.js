@@ -9,7 +9,8 @@ function init() {
 	button.onclick = handleButtonClick1;
 
 	// 추가1
-
+	var button = document.getElementById("deleteButton");
+   	button.onclick = handleButtonClick2;
 
 	loadPlaylist();
 }
@@ -37,3 +38,12 @@ function handleButtonClick1(e){
 }
 
 	//추가2
+function handleButtonClick2(e){
+	var textInput = document.getElementById("songTextInput");
+	var songName = textInput.value;
+	if(songName==""){
+		alert("곡을 입력하세요");
+	}else{
+		remove(songName);
+	}
+}

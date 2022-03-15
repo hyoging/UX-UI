@@ -36,5 +36,9 @@ function getStoreArray(key) {
 	return playlistArray;
 }
 
-	//추가1
-
+//추가1
+function removeAll(){
+	if(confirm('모두 지울까요?')){
+		localStorage.clear();
+	}
+}

@@ -43,4 +43,16 @@ function removeAll(){
 }
 
 // 추가 1
-
+function remove(songName){
+	if(confirm(songName+'을 지울까요?')){
+	   var playlistArray = getSavedSongs();
+	   if (playlistArray != null) {
+		  for (var i = 0; i < playlistArray.length; i++) {//저장된 songName을 모두 지우기 위해
+		  if(playlistArray[i]==songName)
+			 playlistArray.splice(i--,1);
+		  }
+		  localStorage.setItem("playlist", JSON.stringify(playlistArray));
+	   }
+	}
+	location.reload();
+ }

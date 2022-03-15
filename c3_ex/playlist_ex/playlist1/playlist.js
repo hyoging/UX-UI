@@ -30,3 +30,14 @@ function handleButtonClick(e) {
 }
 
 	//추가1
+var button = document.getElementById("deleteAllButton");
+button.onclick = handleButtonClick1;
+function handleButtonClick1(e){
+	removeAll();
+}
+function removeAll(){
+	if(confirm('모두 지울까요?')){
+	localStorage.clear();
+	}
+}
+	
