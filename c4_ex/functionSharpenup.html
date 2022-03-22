@@ -1,0 +1,76 @@
+<!doctype html>
+<head>
+<meta charset="utf-8">
+<title>연필을 깎아 다듬은 함수들</title>
+<script>
+
+function dogsAge(age) {
+   return age * 7;
+}
+
+function rectangleArea(width, height) {
+   var area = width * height;
+   return area;
+}
+
+function triangleArea(width, height) {
+   var area = width * height * 0.5;
+   return area;
+}
+
+function addUp(numArray) {
+   var total = 0;
+   for (var i = 0; i < numArray.length; i++) {
+      total += numArray[i];
+   }
+   return total;
+}
+
+function getAvatar(points) {
+   var avatar;
+   if (points < 100) {
+      avatar = "쥐";
+   } else if (points > 100 && points < 1000) {
+      avatar = "고양이";
+   } else {
+      avatar = "원숭이";
+   }
+   return avatar;
+}
+
+ function getAvatar1(points){
+   var level = points;
+   if(level == 0){
+      return "장난감 곰";
+   }else if (level == 1){
+      return "고양이";
+   }else if (level >= 2){
+      return "고릴라";
+   }
+ }
+var myDogsAge = dogsAge(4);
+var rectArea = rectangleArea(3, 4);
+var triArea = rectangleArea(3, 4);
+var theTotal = addUp([1, 5, 3, 9]);
+var myAvatar = getAvatar(335);
+var yourAvatar = getAvatar1(2);
+
+// 추가 변수에 함수 할당 1
+
+window.onload = outputResults;
+function outputResults(){
+   var output = document.getElementById('output');
+   output.innerHTML = "강아지 나이: " + myDogsAge +"<br>사각형 면적: "+rectArea + "<br>삼각형 면적" + triArea +  "<br>합계: " + theTotal + "<br>내 아바타: " + myAvatar + "<br>너의 아바타: " +yourAvatar ;
+}
+
+
+
+
+</script>
+</head>
+<body>
+
+<!--  추가 표시할 영역 2 -->
+   <div id="output"></div>
+</body>
+</html>
