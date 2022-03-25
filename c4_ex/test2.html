@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test2</title>
+    <script>
+        var Person = {};
+        Person["age"] = 20;
+        Person["name"] = '더보이즈';
+        Person.mobile = '010-1000-1000';
+
+        console.log('나이 : %d', Person.age);
+        console.log('나이 : %d', Person['age']);
+        console.log('이름 : %s', Person.name);
+        console.log('이름 : %s', Person['name']);
+        console.log('전화 : %s', Person.mobile);
+        console.log('전화 : %s', Person["mobile"]);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

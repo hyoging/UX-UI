@@ -12,20 +12,22 @@ var songs = [
 ];
 function suggestSong() {
  //추가 1 함수만들기
- 
- 
-}
-var song = suggestSong();
+    var index = Math.floor(Math.random() * songs.length);
+    var suggestion = songs[index];
+    return suggestion;
+} 
+// var song = suggestSong();
 
 function searchForSong(word) {
 //추가 2 함수만들기
-	
-	
-	
-	
-	
-	
-	
+    var song;
+    for(var i = 0; i < songs.length; i++){
+        song= songs[i];
+        if (songs[i].indexOf(word) >= 0){
+            return song;
+        }
+    }
+	return "없는 곡입니다."
 }
 
 var matchedSong = searchForSong("Code");

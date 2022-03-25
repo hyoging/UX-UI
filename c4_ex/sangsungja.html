@@ -4,7 +4,18 @@
 <title>생성자만들기와 사용</title>
 <script>
 //1.개에 대한 생성자 함수 만들기
-
+function Dog(name, breed, weight){
+    this.name = name;
+    this.breed = breed;
+    this.weight = weight;
+    this.bark = function(){
+        if(this.weight > 25){
+            alert(this.name + "가 멍멍 짓습니다!");
+        }else{
+            alert(this.name + "깽깽 거립니다!");
+        }
+    }
+}
 
 
 
