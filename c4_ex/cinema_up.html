@@ -23,6 +23,13 @@ window.onload = function() {
 								["5:00pm", "9:00pm"]);
 	alert(forbiddenPlanetMovie.getNextShowing());
 
+    var mirimMovie = new Movie("알라딘",
+                                "애니메이션",
+                                3,
+                                ["5:00pm", "6:30pm", "8:00pm", "10:00pm"]);
+    alert(mirimMovie.getNextShowing());
+
+
 }
 
 function Movie(title, genre, rating, showtimes) {
